@@ -13,6 +13,10 @@ It combines portfolio narrative, system design, grounded AI interaction, and pro
 
 ![The Build Archive hero preview](./assets/hero/build-archive-preview.gif)
 
+> [!NOTE]
+> This repository is a **public showcase**, not the production codebase.  
+> The Build Archive’s source code is private because it contains implementation details and private configuration. This repo exists to document the product thinking, architecture, AI system design, visual assets, and launch-readiness proof behind the live portfolio.
+
 ---
 
 ## Visual walkthrough
