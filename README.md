@@ -5,7 +5,7 @@ A portfolio designed as a product: part personal archive, part AI assistant, par
 
 [Live Demo](https://kaviyashre-portfolio.vercel.app/) · [Watch MP4 preview](./assets/hero/build-archive-preview.mp4)
 
-> The production source code is private. This public repository documents the product story, architecture, AI system, visual design, QA proof, and demo assets.
+
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=flat-square&logo=react)](https://react.dev/)
@@ -78,7 +78,7 @@ It combines portfolio narrative, system design, grounded AI interaction, and pro
 
 The Build Archive runs as a Next.js 16 App Router product on Vercel. The UI is an editorial single-page shell. Logmoth questions leave the browser only through a server route, where local retrieval and a deterministic composer produce the answer before optional Azure refinement.
 
-### Diagram 1 — High-level product architecture
+### High-level product architecture
 
 ```mermaid
 flowchart TB
@@ -117,7 +117,7 @@ flowchart TB
   OUT --> CHAT
 ```
 
-### Diagram 2 — Logmoth answering pipeline
+### Logmoth answering pipeline
 
 ```mermaid
 flowchart TD
@@ -138,7 +138,7 @@ flowchart TD
   U --> X[No source cards / debug metadata]
 ```
 
-### Diagram 3 — Blog narration flow
+### Blog narration flow
 
 ```mermaid
 flowchart TD
