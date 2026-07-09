@@ -1,30 +1,4 @@
 # The Build Archive
-### AI-native personal portfolio
-
-A portfolio designed as a product: part personal archive, part AI assistant, part technical case study.
-
-[Live Demo](https://kaviyashre-portfolio.vercel.app/) · [Watch MP4 preview](./assets/hero/build-archive-preview.mp4)
-
-
-
-[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=flat-square&logo=react)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=flat-square)](https://www.framer.com/motion/)
-[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com/)
-[![Azure AI](https://img.shields.io/badge/Azure-AI%20Foundry-0078D4?style=flat-square&logo=microsoft-azure)](https://azure.microsoft.com/)
-
-[![Desktop Perf](https://img.shields.io/badge/Desktop%20Perf-98-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
-[![Mobile Perf](https://img.shields.io/badge/Mobile%20Perf-86-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
-[![Accessibility](https://img.shields.io/badge/A11y-100-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
-[![Best Practices](https://img.shields.io/badge/Best%20Practices-100-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
-[![SEO](https://img.shields.io/badge/SEO-100-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
-
-![The Build Archive hero preview](./assets/hero/build-archive-preview.gif)
-
----
-
-## The portfolio is the product
 
 This is not a static resume site.
 
@@ -32,7 +6,12 @@ This is not a static resume site.
 
 It combines portfolio narrative, system design, grounded AI interaction, and production QA into one product experience — premium, minimal, slightly strange, and deliberately not template-like.
 
+
 **Live:** [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/)
+<br><br>
+
+
+![The Build Archive hero preview](./assets/hero/build-archive-preview.gif)
 
 ---
 
@@ -45,32 +24,23 @@ It combines portfolio narrative, system design, grounded AI interaction, and pro
 | **Blog narration** | ![Blog narration](./assets/gifs/blog-narration.gif) | Browser-native reading experience without paid TTS |
 | **Project modal** | ![Project modal](./assets/gifs/project-modal.gif) | Case-study depth without leaving the page |
 | **Theme switch** | Soft mode · Space mode<br>![Soft mode](./assets/screenshots/homepage-desktop-light.png)<br>![Space mode](./assets/screenshots/homepage-desktop-space.png) | Dual-theme identity without a theme-switch GIF yet |
-| **Error page / Shelf Hop** | ![Error page game](./assets/gifs/error-page-game.gif) | Branded recovery isolated from the homepage bundle |
+| **Error page** | ![Error page game](./assets/gifs/error-page-game.gif) | Branded recovery isolated from the homepage bundle |
 | **Architecture flow** | ![Architecture flow](./assets/gifs/architecture-flow.gif) | End-to-end product and answering pipeline story |
-
-**Watch MP4 versions**
-
-- [Homepage overview](./assets/gifs/homepage-overview.mp4)
-- [Logmoth interaction](./assets/gifs/logmoth-interaction.mp4)
-- [Blog narration](./assets/gifs/blog-narration.mp4)
-- [Project modal](./assets/gifs/project-modal.mp4)
-- [Error page game](./assets/gifs/error-page-game.mp4)
-- [Architecture flow](./assets/gifs/architecture-flow.mp4)
 
 ---
 
 ## Core feature overview
 
-| Layer | Feature | What it proves |
-|---|---|---|
-| Portfolio shell | Editorial single-page archive | Product polish and recruiter scanability |
-| AI layer | Logmoth / Ask The Archive | AI UX integrated into portfolio |
-| Retrieval | Local deterministic archive search | Fast, grounded, fallback-safe answers |
-| AI refinement | Azure AI Foundry refinement | Better professional response quality when useful |
-| Narration | Browser-native Web Speech API | Free reading experience without paid TTS |
-| Error states | Custom 404/error + Shelf Hop | Branded recovery without homepage bundle cost |
-| Performance | Lazy-loading + CLS/LCP work | Production discipline |
-| Safety | Private-boundary refusals | Public-safe AI behavior |
+| Layer | Feature |
+|---|---|
+| Portfolio shell | Editorial single-page archive |
+| AI layer | Ask The Archive | 
+| Retrieval | Local deterministic archive search | 
+| AI refinement | Azure AI Foundry refinement |
+| Narration | Browser-native Web Speech API |
+| Error states | Custom 404/error + Shelf Hop | 
+| Performance | Lazy-loading + CLS/LCP work | 
+| Safety | Private-boundary refusals | 
 
 ---
 
@@ -152,7 +122,7 @@ flowchart TD
   G -->|Stop| H[Return to Scroll Mode]
 ```
 
-### Diagram 4 — Error page lazy-load flow
+### Error page lazy-load flow
 
 ```mermaid
 flowchart TD
@@ -168,19 +138,16 @@ flowchart TD
 
 ![Architecture flow animation](./assets/gifs/architecture-flow.gif)
 
-[Watch architecture flow MP4](./assets/gifs/architecture-flow.mp4) · Frame notes → [architecture-flow-storyboard.md](./assets/diagrams/architecture-flow-storyboard.md)
+Frame notes → [architecture-flow-storyboard.md](./assets/diagrams/architecture-flow-storyboard.md)
 
 Deeper system notes → [docs/architecture.md](./docs/architecture.md)
 
 ---
 
-## Logmoth — Ask The Archive
+## Ask The Archive
 
 **Logmoth** is the archive-native assistant. It is not a support chatbot and not a generic ChatGPT wrapper. It answers public-safe questions about projects, experience, skills, role-fit, personality, field notes, and build history — grounded in a local archive before any cloud call.
 
-**Why it exists**
-
-Recruiters and curious visitors should be able to ask role-fit and project questions without leaving the page. The assistant should feel like part of the archive: soft, slightly strange, and professionally useful.
 
 **How it answers**
 
@@ -216,21 +183,10 @@ Full AI system notes → [docs/ai-system.md](./docs/ai-system.md)
 
 ## Blog narration
 
-Field notes use the browser-native **Web Speech API** — no ElevenLabs, no paid TTS, no external audio API.
-
-| Behavior | Detail |
-|---|---|
-| Engine | Browser `SpeechSynthesis` |
-| Sync | Paragraph-level active highlight |
-| Controls | Play / Pause / Resume / Stop |
-| Modes | Scroll Mode and Audio Mode stay separate |
-| Close | Closing the modal cancels narration |
-
+Field notes use the browser-native **Web Speech API**
 ![Blog narration](./assets/gifs/blog-narration.gif)
 
-[Watch blog narration MP4](./assets/gifs/blog-narration.mp4)
 
-Static proof → ![Blog narration modal](./assets/screenshots/blog-narration-modal.png)
 
 ---
 
