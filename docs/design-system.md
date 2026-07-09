@@ -1,20 +1,18 @@
 # Design System — The Build Archive
 
-> Visual identity and design principles for the portfolio. Color values to be captured from production CSS.
+> Visual identity and design principles. Exact hex values live in production CSS and are not invented here.
 
 ## Brand identity
-
-The Build Archive is designed to feel:
 
 | Attribute | Expression |
 |---|---|
 | **Premium** | Generous whitespace, refined typography, no clutter |
-| **Minimal** | Every element earns its place; no decorative noise |
-| **Editorial** | Story-led layout, magazine-quality hierarchy |
+| **Minimal** | Every element earns its place |
+| **Editorial** | Story-led layout, clear hierarchy |
 | **Technical** | Architecture docs, case studies, engineering proof |
 | **Soft** | Rounded surfaces, gentle gradients, warm neutrals |
 | **Slightly strange** | Moth motif, archive metaphors, unexpected delight |
-| **Archive-native** | Card-based records, shelf metaphors, field notes |
+| **Archive-native** | Record cards, shelf metaphors, field notes |
 | **Recruiter-ready** | Scannable hierarchy, clear CTAs, role-fit answers |
 
 ### What it is not
@@ -22,59 +20,43 @@ The Build Archive is designed to feel:
 - Not template-like
 - Not SaaS-generic
 - Not support-chatbot-like
-- Not a dark-mode-only developer cliché (Soft mode and Space mode coexist)
+- Not dark-mode-only (Soft mode and Space mode coexist)
 
 ---
 
 ## Visual principles
 
-### Layout
+**Layout** — Single-page editorial flow with hash-navigated sections. Project case studies open in modals. Consistent card language across projects, field notes, and Logmoth.
 
-- Single-page editorial flow with hash-navigated sections
-- Clear visual hierarchy: hero → about → projects → experience → blog → contact
-- Project case studies open in modals — depth without page navigation
-- Consistent card language across projects, blog posts, and Logmoth surfaces
+**Typography** — Strong contrast between display and body. Readable long-form for field notes. Monospace accents only where technical metadata needs it.
 
-### Typography
-
-- Editorial heading scale with strong contrast between display and body
-- Readable body text optimized for long-form field notes
-- Monospace accents for technical metadata where appropriate
-
-### The moth motif
-
-**Logmoth** — the archive-native assistant — uses a subtle moth glow as its accent. The motif appears in:
-
-- Logmoth chat avatar and accent glow
-- Loading page animation
-- Error page Shelf Hop game
-- Soft accent highlights on interactive elements
-
-The moth is strange enough to be memorable, soft enough to not feel gimmicky.
+**The moth motif** — Logmoth’s soft glow appears in the chat avatar, loading choreography, Shelf Hop, and interactive accents. Strange enough to remember; soft enough not to feel gimmicky.
 
 ---
 
-## Color palette
+## Color tokens
 
-> Values to be captured from production CSS. Do not use invented hex codes in documentation.
-
-| Token | Role | Value |
-|---|---|---|
-| Archive background | Main page surface (Soft mode) | To be captured from production CSS |
-| Ink foreground | Primary text | To be captured from production CSS |
-| Moth glow | Logmoth accent, interactive highlights | To be captured from production CSS |
-| Soft card | Card surfaces, project tiles | To be captured from production CSS |
-| Space mode surface | Dark theme background | To be captured from production CSS |
-| Border haze | Subtle dividers and card borders | To be captured from production CSS |
+| Token | Role |
+|---|---|
+| Archive background | Main Soft-mode page surface |
+| Ink foreground | Primary text |
+| Moth glow | Logmoth accent and interactive highlights |
+| Soft card | Project tiles and archive surfaces |
+| Space mode surface | Dark theme background |
+| Border haze | Subtle dividers and card edges |
+| Editorial accent | Emphasis in headlines and active states |
 
 ### Theme modes
 
-| Mode | Character |
-|---|---|
-| **Soft mode** | Default — warm, editorial, archive-paper feel |
-| **Space mode** | Dark — deep surfaces, moth glow accents, night-archive atmosphere |
+| Mode | Character | Proof asset |
+|---|---|---|
+| **Soft mode** | Warm, editorial, archive-paper feel | `assets/screenshots/homepage-desktop-light.png` |
+| **Space mode** | Deep surfaces, moth glow, night-archive atmosphere | `assets/screenshots/homepage-desktop-space.png` |
 
-Theme switch should be captured in `assets/gifs/theme-switch.gif`.
+A dedicated `theme-switch.gif` is not in the repository yet. Soft/Space proof currently uses the static homepage screenshots above. Mobile Soft/Space captures also exist:
+
+- `assets/screenshots/homepage-mobile-light.png`
+- `assets/screenshots/homepage-mobile-space.png`
 
 ---
 
@@ -82,11 +64,11 @@ Theme switch should be captured in `assets/gifs/theme-switch.gif`.
 
 | Principle | Application |
 |---|---|
-| **Soft entrance** | Sections fade and slide in gently on scroll |
-| **Moth glow pulse** | Subtle accent animation on Logmoth interactive elements |
-| **Loading choreography** | Creative loading page with archive-themed animation |
-| **Error delight** | Shelf Hop game with archive-appropriate physics |
-| **Reduced motion** | All animations respect `prefers-reduced-motion`; Shelf Hop bypassed entirely |
+| Soft entrance | Sections fade and slide gently on scroll |
+| Moth glow pulse | Subtle accent on Logmoth interactive elements |
+| Loading choreography | Archive-themed loading page (`loading-page.png`) |
+| Error delight | Shelf Hop on error pages only |
+| Reduced motion | Animations and Shelf Hop respect `prefers-reduced-motion` |
 
 Motion should feel archive-native — deliberate reveals, not bouncy SaaS transitions.
 
@@ -96,13 +78,13 @@ Motion should feel archive-native — deliberate reveals, not bouncy SaaS transi
 
 | Principle | Implementation |
 |---|---|
-| **Lighthouse 100** | Accessibility score on both desktop and mobile |
-| **Keyboard navigation** | All interactive elements reachable and operable |
-| **Focus indicators** | Visible focus rings on all interactive surfaces |
-| **Color contrast** | Text meets WCAG contrast requirements in both themes |
-| **Reduced motion** | `prefers-reduced-motion` disables animations and Shelf Hop |
-| **Semantic HTML** | Proper heading hierarchy, landmarks, and ARIA where needed |
-| **Screen reader** | Logmoth chat accessible; blog narration does not block reading |
+| Lighthouse 100 | Accessibility score on desktop and mobile |
+| Keyboard navigation | Interactive elements reachable and operable |
+| Focus indicators | Visible focus on interactive surfaces |
+| Color contrast | Text meets WCAG requirements in both themes |
+| Reduced motion | Disables animations and Shelf Hop |
+| Semantic HTML | Heading hierarchy, landmarks, ARIA where needed |
+| Screen reader | Logmoth chat accessible; narration does not block reading |
 
 ---
 
@@ -111,23 +93,20 @@ Motion should feel archive-native — deliberate reveals, not bouncy SaaS transi
 | Component | Visual character |
 |---|---|
 | Project cards | Soft card surface, hover lift, tech stack tags |
-| Project modal | Full case-study overlay with editorial layout |
+| Project modal | Full case-study overlay (`signalforge-project-modal.png`) |
 | Logmoth chat | Compact panel, moth avatar, clean message bubbles |
 | Field notes | Long-form reading surface with narration controls |
-| 404 page | Archive-themed with recovery CTA and optional Shelf Hop |
+| 404 page | Archive-themed recovery + optional Shelf Hop |
 | Loading page | Branded animation, not a generic spinner |
 
 ---
 
-## Asset capture notes
+## Capture notes
 
-When capturing visual assets for this showcase repository:
+1. Capture from production: [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/)
+2. Soft mode as default; Space mode for theme proof
+3. Desktop 1440×900 · Mobile 390×844
+4. No private content in any capture
+5. Do not invent hex codes in documentation
 
-1. **Use production build** — capture from the deployed Vercel site, not local dev
-2. **Both themes** — capture Soft mode as default; include Space mode in theme-switch GIF
-3. **Consistent viewport** — 1440×900 for desktop captures, 390×844 for mobile
-4. **GIF frame rate** — 15–24 fps for smooth but reasonable file sizes
-5. **No private content** — ensure no personal private details appear in screenshots
-6. **Lighthouse reports** — capture full report screenshots, not cropped scores
-
-Full asset checklist → [visual-asset-plan.md](./visual-asset-plan.md)
+Full asset inventory → [visual-asset-plan.md](./visual-asset-plan.md)

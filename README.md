@@ -1,107 +1,198 @@
 # The Build Archive
+### AI-native personal portfolio
 
-**AI-native personal portfolio**
+A portfolio designed as a product: part personal archive, part AI assistant, part technical case study.
 
-> A portfolio designed as a product: part personal archive, part AI assistant, part technical case study.
+[Live Demo](https://kaviyashre-portfolio.vercel.app/) · [Watch MP4 preview](./assets/hero/build-archive-preview.mp4)
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-kaviyashre--portfolio.vercel.app-6B7FD7?style=for-the-badge)](https://kaviyashre-portfolio.vercel.app/)
+> The production source code is private. This public repository documents the product story, architecture, AI system, visual design, QA proof, and demo assets.
+
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=flat-square&logo=react)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=flat-square)](https://www.framer.com/motion/)
 [![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com/)
+[![Azure AI](https://img.shields.io/badge/Azure-AI%20Foundry-0078D4?style=flat-square&logo=microsoft-azure)](https://azure.microsoft.com/)
 
-[![Lighthouse Desktop](https://img.shields.io/badge/Desktop%20Perf-98-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
-[![Lighthouse Mobile](https://img.shields.io/badge/Mobile%20Perf-86-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
+[![Desktop Perf](https://img.shields.io/badge/Desktop%20Perf-98-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
+[![Mobile Perf](https://img.shields.io/badge/Mobile%20Perf-86-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
 [![Accessibility](https://img.shields.io/badge/A11y-100-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
+[![Best Practices](https://img.shields.io/badge/Best%20Practices-100-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
 [![SEO](https://img.shields.io/badge/SEO-100-22c55e?style=flat-square)](https://kaviyashre-portfolio.vercel.app/)
 
-> **Source code privacy:** Production source code is private. This repository is a public-safe showcase — architecture, case studies, QA proof, and visual documentation only.
-
-![The Build Archive preview](./assets/hero/build-archive-preview.gif)
-
-*Preview GIF to be added after final screen capture.*
+![The Build Archive hero preview](./assets/hero/build-archive-preview.gif)
 
 ---
 
-## The portfolio is the product.
+## The portfolio is the product
 
-This is not a static resume site. **The Build Archive** is a product-style portfolio that treats personal storytelling, technical case studies, and grounded AI interaction as first-class features — not afterthoughts.
+This is not a static resume site.
 
-Visitors get an editorial, recruiter-scannable experience. Recruiters can skim projects and experience in seconds. Curious visitors can ask **Logmoth** (the archive-native assistant) role-fit and project questions. Engineers can read the architecture, performance work, and AI pipeline decisions documented here.
+**The Build Archive** is a polished archive surface: editorial storytelling for recruiters who need to scan fast, case-study depth for engineers who want to go further, and a grounded AI assistant for visitors who want to ask questions without booking a call.
 
-The result: a portfolio that reads like a shipped product — premium, minimal, slightly strange, and deliberately not template-like.
+It combines portfolio narrative, system design, grounded AI interaction, and production QA into one product experience — premium, minimal, slightly strange, and deliberately not template-like.
+
+**Live:** [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/)
 
 ---
 
 ## Visual walkthrough
 
-| Moment | Preview | What it proves |
+| Moment | Preview | What this proves |
 |---|---|---|
-| Homepage overview | ![Homepage](./assets/gifs/homepage-overview.gif) | Product polish and visual identity |
-| Logmoth interaction | ![Logmoth](./assets/gifs/logmoth-interaction.gif) | AI UX and grounded assistant design |
-| Blog narration | ![Narration](./assets/gifs/blog-narration.gif) | Browser-native narration and reading experience |
-| Project modal | ![Project modal](./assets/gifs/project-modal.gif) | Case-study storytelling |
-| Error page game | ![Shelf Hop](./assets/gifs/error-page-game.gif) | Branded polish without homepage bundle cost |
+| **Homepage overview** | ![Homepage overview](./assets/gifs/homepage-overview.gif) | Editorial single-page polish and recruiter scanability |
+| **Logmoth interaction** | ![Logmoth interaction](./assets/gifs/logmoth-interaction.gif) | AI UX integrated into the archive, not bolted on |
+| **Blog narration** | ![Blog narration](./assets/gifs/blog-narration.gif) | Browser-native reading experience without paid TTS |
+| **Project modal** | ![Project modal](./assets/gifs/project-modal.gif) | Case-study depth without leaving the page |
+| **Theme switch** | Soft mode · Space mode<br>![Soft mode](./assets/screenshots/homepage-desktop-light.png)<br>![Space mode](./assets/screenshots/homepage-desktop-space.png) | Dual-theme identity without a theme-switch GIF yet |
+| **Error page / Shelf Hop** | ![Error page game](./assets/gifs/error-page-game.gif) | Branded recovery isolated from the homepage bundle |
+| **Architecture flow** | ![Architecture flow](./assets/gifs/architecture-flow.gif) | End-to-end product and answering pipeline story |
+
+**Watch MP4 versions**
+
+- [Homepage overview](./assets/gifs/homepage-overview.mp4)
+- [Logmoth interaction](./assets/gifs/logmoth-interaction.mp4)
+- [Blog narration](./assets/gifs/blog-narration.mp4)
+- [Project modal](./assets/gifs/project-modal.mp4)
+- [Error page game](./assets/gifs/error-page-game.mp4)
+- [Architecture flow](./assets/gifs/architecture-flow.mp4)
 
 ---
 
-## Core features
+## Core feature overview
 
-| Layer | Feature | Why it matters |
+| Layer | Feature | What it proves |
 |---|---|---|
-| Portfolio shell | Editorial single-page experience | Recruiters can scan quickly |
-| AI layer | Logmoth / Ask The Archive | Visitors can ask role-fit and project questions |
+| Portfolio shell | Editorial single-page archive | Product polish and recruiter scanability |
+| AI layer | Logmoth / Ask The Archive | AI UX integrated into portfolio |
 | Retrieval | Local deterministic archive search | Fast, grounded, fallback-safe answers |
-| AI refinement | Azure AI Foundry refinement | Better wording for professional answers |
-| Narration | Browser Web Speech API | Free blog narration without paid TTS |
-| Performance | Lazy loading and LCP/CLS work | Production-grade user experience |
-| Error states | Custom 404/error pages + Shelf Hop | Polished recovery experience |
-| Safety | Refusals and private-boundary logic | Public-safe AI assistant behavior |
+| AI refinement | Azure AI Foundry refinement | Better professional response quality when useful |
+| Narration | Browser-native Web Speech API | Free reading experience without paid TTS |
+| Error states | Custom 404/error + Shelf Hop | Branded recovery without homepage bundle cost |
+| Performance | Lazy-loading + CLS/LCP work | Production discipline |
+| Safety | Private-boundary refusals | Public-safe AI behavior |
 
 ---
 
-## High-level architecture
+## Architecture and system design
+
+The Build Archive runs as a Next.js 16 App Router product on Vercel. The UI is an editorial single-page shell. Logmoth questions leave the browser only through a server route, where local retrieval and a deterministic composer produce the answer before optional Azure refinement.
+
+### Diagram 1 — High-level product architecture
 
 ```mermaid
-flowchart LR
-    A[User] --> B[Next.js App Router UI]
-    B --> C[Portfolio Sections]
-    B --> D[Logmoth Chat UI]
-    D --> E["/api/logmoth/ask"]
-    E --> F[Local Archive Retrieval]
-    F --> G[Deterministic Answer Composer]
-    G --> H[Azure AI Foundry Refinement]
-    G --> I[Local Fallback if Azure fails]
-    H --> J[Clean Answer UI]
-    I --> J
+flowchart TB
+  subgraph Client["Client Experience"]
+    V[Visitor]
+    UI[Portfolio UI Shell]
+    SEC[Hero · About · Skills · Experience · Projects · Field Notes · Contact]
+    CHAT[Logmoth Chat UI]
+  end
+
+  subgraph Server["Server / AI Route"]
+    EDGE[Vercel Edge / Next.js App Router]
+    API["/api/logmoth/ask"]
+  end
+
+  subgraph Answer["Answering Layer"]
+    RET[Local Archive Retrieval]
+    COMP[Deterministic Answer Composer]
+    AZ[Azure AI Foundry Refinement]
+  end
+
+  subgraph Resilience["Resilience"]
+    FB[Local Fallback]
+    OUT[Clean Answer UI]
+  end
+
+  V --> EDGE --> UI
+  UI --> SEC
+  UI --> CHAT
+  CHAT --> API
+  API --> RET --> COMP
+  COMP --> AZ
+  COMP --> FB
+  AZ --> OUT
+  FB --> OUT
+  OUT --> CHAT
 ```
 
----
-
-## Logmoth pipeline
-
-**Ask The Archive** routes every question through a grounded, deterministic pipeline before optional AI refinement.
+### Diagram 2 — Logmoth answering pipeline
 
 ```mermaid
 flowchart TD
-    A[Question received] --> B[Intent and mode inference]
-    B --> C{Fast local path?}
-    C -->|Greetings / story / private boundaries| D[Immediate local response]
-    C -->|Archive question| E[Retrieve archive records]
-    E --> F[Compose deterministic answer]
-    F --> G{Azure refinement useful?}
-    G -->|Yes| H[Azure AI Foundry refinement]
-    G -->|No| I[Return composed answer]
-    H --> J{Azure available?}
-    J -->|Yes| K[Refined answer]
-    J -->|No| L[Local fallback]
-    K --> M[Clean answer UI — no debug/source cards]
-    L --> M
-    I --> M
-    D --> M
+  Q[Question] --> I[Intent classification]
+  I --> B[Boundary check]
+  B --> F{Fast local path?}
+  F -->|Greetings / story / private refusals| L[Immediate local response]
+  F -->|Professional / project questions| R[Archive retrieval]
+  R --> C[Deterministic answer composition]
+  C --> A{Azure refinement useful?}
+  A -->|Yes| AZ[Optional Azure refinement]
+  A -->|No| U[Clean UI response]
+  AZ --> OK{Azure succeeds?}
+  OK -->|Yes| U
+  OK -->|No| FB[Fallback to local answer]
+  FB --> U
+  L --> U
+  U --> X[No source cards / debug metadata]
 ```
 
-**Internal modes** (inferred from question context):
+### Diagram 3 — Blog narration flow
+
+```mermaid
+flowchart TD
+  A[Open Field Note] --> B[Extract paragraphs]
+  B --> C[Scroll Mode]
+  C --> D[Play]
+  D --> E[Browser SpeechSynthesis]
+  E --> F[Active paragraph highlight]
+  F --> G{User action}
+  G -->|Pause / Resume| E
+  G -->|Stop| H[Return to Scroll Mode]
+```
+
+### Diagram 4 — Error page lazy-load flow
+
+```mermaid
+flowchart TD
+  A[Unknown route] --> B[not-found.tsx]
+  B --> C[Archive-themed 404]
+  C --> D[Dynamic import Shelf Hop]
+  D --> E{Reduced-motion check}
+  E -->|Motion OK| F[Shelf Hop game]
+  E -->|Reduced motion| G[Static fallback]
+  F --> H[Recovery CTA]
+  G --> H
+```
+
+![Architecture flow animation](./assets/gifs/architecture-flow.gif)
+
+[Watch architecture flow MP4](./assets/gifs/architecture-flow.mp4) · Frame notes → [architecture-flow-storyboard.md](./assets/diagrams/architecture-flow-storyboard.md)
+
+Deeper system notes → [docs/architecture.md](./docs/architecture.md)
+
+---
+
+## Logmoth — Ask The Archive
+
+**Logmoth** is the archive-native assistant. It is not a support chatbot and not a generic ChatGPT wrapper. It answers public-safe questions about projects, experience, skills, role-fit, personality, field notes, and build history — grounded in a local archive before any cloud call.
+
+**Why it exists**
+
+Recruiters and curious visitors should be able to ask role-fit and project questions without leaving the page. The assistant should feel like part of the archive: soft, slightly strange, and professionally useful.
+
+**How it answers**
+
+1. Classify intent and check private boundaries
+2. Fast-path greetings, story prompts, and refusals locally
+3. Retrieve relevant public archive records for professional/project questions
+4. Compose a deterministic answer from those records
+5. Optionally refine wording with Azure AI Foundry when useful
+6. Fall back to the local composed answer if Azure fails
+7. Return a clean answer UI — no confidence scores, source cards, or debug metadata
+
+**Internal modes** (inferred from the question)
 
 | Mode | Purpose |
 |---|---|
@@ -109,127 +200,131 @@ flowchart TD
 | **Recruiter Mode** | Role-fit, strengths, and hiring-relevant framing |
 | **Story Mode** | Personality, build history, and narrative questions |
 
-> Logmoth refuses private, inappropriate, or out-of-scope prompts. Answers never expose debug metadata or source cards.
+**Product constraints**
 
----
+- Local deterministic retrieval first
+- Azure refinement is optional polish, not a dependency
+- Private / inappropriate / out-of-scope prompts are refused
+- No chat TTS — Logmoth answers are read, not spoken
+- No raw prompts, private archive content, or implementation leakage in the public UI
 
-## Architecture flow GIF storyboard
+![Logmoth recruiter answer](./assets/screenshots/logmoth-recruiter-answer.png)
 
-An animated walkthrough of the system flow — see [assets/diagrams/architecture-flow-storyboard.md](./assets/diagrams/architecture-flow-storyboard.md) for frame-by-frame visual notes.
-
-| Frame | Scene |
-|---|---|
-| 1 | Visitor opens The Build Archive |
-| 2 | Next.js renders the archive shell |
-| 3 | Visitor opens Logmoth |
-| 4 | Question moves into `/api/logmoth/ask` |
-| 5 | Local archive retrieval finds relevant records |
-| 6 | Deterministic composer drafts the answer |
-| 7 | Azure refinement improves professional answers when useful |
-| 8 | Local fallback handles failure safely |
-| 9 | UI returns a clean answer with no debug metadata |
-
-![Architecture flow](./assets/gifs/architecture-flow.gif)
+Full AI system notes → [docs/ai-system.md](./docs/ai-system.md)
 
 ---
 
 ## Blog narration
 
-Field notes use browser-native speech synthesis — no paid TTS, no external audio API.
+Field notes use the browser-native **Web Speech API** — no ElevenLabs, no paid TTS, no external audio API.
 
-```mermaid
-flowchart TD
-    A[Open field note] --> B[Extract paragraphs]
-    B --> C[Scroll mode active]
-    C --> D[User presses Play]
-    D --> E[Browser speech synthesis reads paragraph]
-    E --> F[Active paragraph highlights]
-    F --> G{User action}
-    G -->|Pause / Resume| E
-    G -->|Stop| H[Return to scroll mode]
-```
+| Behavior | Detail |
+|---|---|
+| Engine | Browser `SpeechSynthesis` |
+| Sync | Paragraph-level active highlight |
+| Controls | Play / Pause / Resume / Stop |
+| Modes | Scroll Mode and Audio Mode stay separate |
+| Close | Closing the modal cancels narration |
 
-- No ElevenLabs or paid TTS services
-- Browser-native **Web Speech API**
-- Paragraph-level sync between audio and highlight
-- Scroll mode and audio mode kept intentionally separate
+![Blog narration](./assets/gifs/blog-narration.gif)
+
+[Watch blog narration MP4](./assets/gifs/blog-narration.mp4)
+
+Static proof → ![Blog narration modal](./assets/screenshots/blog-narration-modal.png)
 
 ---
 
-## Error page system
+## Performance, SEO, and accessibility
 
-The **Logmoth Shelf Hop** mini game lives only on error pages — it never loads on the homepage.
+Final QA proof against production:
 
-```mermaid
-flowchart TD
-    A[Unknown route] --> B[not-found.tsx]
-    B --> C[Archive-themed 404]
-    C --> D[Dynamic import Shelf Hop]
-    D --> E{Reduced motion?}
-    E -->|No| F[Play Shelf Hop]
-    E -->|Yes| G[Static fallback]
-    F --> H[Recovery CTA]
-    G --> H
-```
+### Desktop
 
----
+| Metric | Score |
+|---|---|
+| Performance | **98** |
+| Accessibility | **100** |
+| Best Practices | **100** |
+| SEO | **100** |
+| CLS | **0.087** |
 
-## Performance and launch proof
+![Lighthouse desktop](./assets/screenshots/lighthouse-desktop.png)
 
-| Metric | Desktop | Mobile |
-|---|---|---|
-| **Performance** | 98 | 86 |
-| **Accessibility** | 100 | 100 |
-| **Best Practices** | 100 | 100 |
-| **SEO** | 100 | 100 |
-| **CLS** | 0.087 | 0.078 |
+### Mobile
 
-**What drove these scores:**
+| Metric | Score |
+|---|---|
+| Performance | **86** |
+| Accessibility | **100** |
+| Best Practices | **100** |
+| SEO | **100** |
+| CLS | **0.078** |
 
-- Homepage CLS fixed through layout-stable hero and section mounting
-- Lazy-mounted section hash navigation fixed scroll-jump regressions
-- Logmoth kept lightweight — no heavy client bundles on first paint
-- Hero image prioritized for LCP
-- Error game isolated via dynamic import on 404 only
-- `prefers-reduced-motion` respected across animations and Shelf Hop
+![Lighthouse mobile](./assets/screenshots/lighthouse-mobile.png)
 
-Full QA details → [docs/qa-summary.md](./docs/qa-summary.md)
+**What the scores reflect**
+
+- Metadata and canonical URL aligned to the production URL
+- Sitemap / robots readiness
+- Open Graph / Twitter readiness
+- Optimized images with hero priority / `fetchPriority`
+- Lazy-loaded below-fold sections
+- CLS held below 0.1 on both form factors
+- Logmoth kept lightweight on initial load
+- Shelf Hop isolated to error pages only
+- Accessibility score 100 with reduced-motion support and keyboard/focus care
+
+Full QA checklist → [docs/qa-summary.md](./docs/qa-summary.md)
 
 ---
 
 ## Design system
 
-**Visual identity:** premium · minimal · editorial · technical · soft · slightly strange · archive-native · recruiter-ready
+**Identity:** premium · minimal · editorial · technical · soft · slightly strange · archive-native · recruiter-ready
 
-| Token | Role | Value |
-|---|---|---|
-| Archive background | Main page surface | To be captured from production CSS |
-| Ink foreground | Primary text | To be captured from production CSS |
-| Moth glow | Accent glow | To be captured from production CSS |
-| Soft card | Card surfaces | To be captured from production CSS |
-| Space mode surface | Dark theme surface | To be captured from production CSS |
-| Border haze | Subtle dividers | To be captured from production CSS |
+Not template-like. Not SaaS-generic. Not support-chatbot-like.
 
-Full design documentation → [docs/design-system.md](./docs/design-system.md)
+| Token | Role |
+|---|---|
+| Archive background | Main Soft-mode page surface |
+| Ink foreground | Primary text |
+| Moth glow | Logmoth accent and interactive highlights |
+| Soft card | Project tiles and archive surfaces |
+| Space mode surface | Dark theme background |
+| Border haze | Subtle dividers and card edges |
+| Editorial accent | Emphasis in headlines and active states |
+
+| Mode | Character |
+|---|---|
+| **Soft mode** | Warm, editorial, archive-paper feel |
+| **Space mode** | Deep surfaces, moth glow accents, night-archive atmosphere |
+
+![Soft mode](./assets/screenshots/homepage-desktop-light.png)
+
+![Space mode](./assets/screenshots/homepage-desktop-space.png)
+
+Exact hex values are kept in production CSS and are not invented here. Full design notes → [docs/design-system.md](./docs/design-system.md)
 
 ---
 
-## Visual asset plan
+## Visual asset inventory
 
-| Asset | Path | Format | Capture notes |
-|---|---|---|---|
-| Hero preview | `assets/hero/build-archive-preview.gif` | GIF + optional MP4 | 8–12 sec cinematic overview |
-| Homepage overview | `assets/gifs/homepage-overview.gif` | GIF | Smooth scroll from hero to projects |
-| Logmoth interaction | `assets/gifs/logmoth-interaction.gif` | GIF | Ask a recruiter-style question |
-| Blog narration | `assets/gifs/blog-narration.gif` | GIF | Play narration and show active paragraph |
-| Project modal | `assets/gifs/project-modal.gif` | GIF | Open SignalForge case study |
-| Theme switch | `assets/gifs/theme-switch.gif` | GIF | Soft mode to Space mode |
-| Error page game | `assets/gifs/error-page-game.gif` | GIF | Unknown route + Shelf Hop |
-| Architecture flow | `assets/gifs/architecture-flow.gif` | GIF | Animated system flow |
-| Desktop Lighthouse | `assets/screenshots/lighthouse-desktop.png` | PNG | Final desktop report |
-| Mobile Lighthouse | `assets/screenshots/lighthouse-mobile.png` | PNG | Final mobile report |
+| Asset | File used | Purpose |
+|---|---|---|
+| Hero preview | `assets/hero/build-archive-preview.gif` (+ `.mp4`) | Cinematic README open |
+| Homepage overview | `assets/gifs/homepage-overview.gif` (+ `.mp4`) | Full-page product polish |
+| Logmoth interaction | `assets/gifs/logmoth-interaction.gif` (+ `.mp4`) | Grounded AI UX walkthrough |
+| Blog narration | `assets/gifs/blog-narration.gif` (+ `.mp4`) | Web Speech reading experience |
+| Project modal | `assets/gifs/project-modal.gif` (+ `.mp4`) | Case-study storytelling |
+| Error page / Shelf Hop | `assets/gifs/error-page-game.gif` (+ `.mp4`) | Branded 404 recovery |
+| Architecture flow | `assets/gifs/architecture-flow.gif` (+ `.mp4`) | System pipeline animation |
+| Theme proof (static) | `homepage-desktop-light.png` / `homepage-desktop-space.png` | Soft ↔ Space identity |
+| Logmoth answer proof | `logmoth-recruiter-answer.png` | Clean recruiter-mode UI |
+| Blog narration proof | `blog-narration-modal.png` | Narration controls / highlight |
+| Lighthouse desktop | `lighthouse-desktop.png` | Desktop QA proof |
+| Lighthouse mobile | `lighthouse-mobile.png` | Mobile QA proof |
 
-Full capture plan → [docs/visual-asset-plan.md](./docs/visual-asset-plan.md)
+Capture plan and missing optional assets → [docs/visual-asset-plan.md](./docs/visual-asset-plan.md)
 
 ---
 
@@ -237,32 +332,27 @@ Full capture plan → [docs/visual-asset-plan.md](./docs/visual-asset-plan.md)
 
 | Document | Description |
 |---|---|
-| [Case study](./docs/case-study.md) | Problem, product thinking, decisions, outcome |
-| [Architecture](./docs/architecture.md) | System design, flows, and component boundaries |
-| [AI system](./docs/ai-system.md) | Logmoth pipeline, retrieval, refinement, safety |
-| [Design system](./docs/design-system.md) | Brand identity, palette, motion, accessibility |
-| [QA summary](./docs/qa-summary.md) | Lighthouse scores, security checklist, readiness |
-| [Visual asset plan](./docs/visual-asset-plan.md) | Screen capture checklist and asset specs |
+| [Case study](./docs/case-study.md) | Why it exists, product thinking, outcome |
+| [Architecture](./docs/architecture.md) | System design and flow diagrams |
+| [AI system](./docs/ai-system.md) | Logmoth pipeline, retrieval, safety |
+| [Design system](./docs/design-system.md) | Brand, tokens, motion, accessibility |
+| [QA summary](./docs/qa-summary.md) | Lighthouse, security, readiness |
+| [Visual asset plan](./docs/visual-asset-plan.md) | Asset inventory and capture specs |
+| [Architecture storyboard](./assets/diagrams/architecture-flow-storyboard.md) | Frame-by-frame animation notes |
 
 ---
 
 ## What this demonstrates
 
-This project demonstrates:
-
-- **AI product design** — assistant UX that feels native to the portfolio, not bolted on
-- **RAG / retrieval thinking** — local deterministic archive search before any LLM call
-- **LLM orchestration** — compose first, refine when useful, fallback when Azure fails
-- **Safe assistant design** — refusals, private-boundary logic, no debug leakage
-- **Frontend AI UX** — clean answer surfaces without source cards or raw prompts
-- **Production-grade Next.js** — App Router, lazy sections, isolated error-page bundles
-- **Performance and accessibility discipline** — Lighthouse 98/100 desktop, 100 a11y both form factors
-- **Backend / cloud product thinking** — Azure AI Foundry integration with graceful degradation
+- **AI product design** — an assistant that feels native to the portfolio
+- **Retrieval thinking** — local deterministic archive search before any LLM call
+- **LLM orchestration** — compose first, refine when useful, fall back when Azure fails
+- **Safe assistant design** — refusals, private boundaries, no debug leakage
+- **Frontend AI UX** — clean answers without source cards or raw prompts
+- **Production Next.js** — App Router, lazy sections, isolated error-page bundles
+- **Performance and accessibility discipline** — final QA scores above, CLS under 0.1
+- **Cloud product thinking** — Azure AI Foundry with graceful degradation
 - **Recruiter-facing storytelling** — scannable layout, case-study modals, role-fit answers
 - **Full-stack ownership** — design, build, QA, deploy, and document end to end
 
 ---
-
-## Repository note
-
-This is a **public showcase repository** for The Build Archive. The production source code is kept private. This repository documents the architecture, visual system, feature walkthroughs, QA proof, and engineering decisions — without exposing implementation code, secrets, or private archive data.

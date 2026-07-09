@@ -1,152 +1,184 @@
 # Visual Asset Plan — The Build Archive
 
-> Checklist for screen captures and visual assets to complete this showcase repository.
+> Inventory of assets actually present in this repository, how they are used, and what remains optional to capture.
 
-## Asset inventory
+## Actual assets found
 
-| Asset | Path | Format | Capture notes |
-|---|---|---|---|
-| Hero preview | `assets/hero/build-archive-preview.gif` | GIF + optional MP4 | 8–12 sec cinematic overview of the full archive experience |
-| Homepage overview | `assets/gifs/homepage-overview.gif` | GIF | Smooth scroll from hero through projects and experience |
-| Logmoth interaction | `assets/gifs/logmoth-interaction.gif` | GIF | Open Logmoth, ask a recruiter-style question, show clean answer |
-| Blog narration | `assets/gifs/blog-narration.gif` | GIF | Open a field note, press Play, show active paragraph highlight |
-| Project modal | `assets/gifs/project-modal.gif` | GIF | Open SignalForge (or featured) case study modal |
-| Theme switch | `assets/gifs/theme-switch.gif` | GIF | Toggle Soft mode → Space mode, show visual transition |
-| Error page game | `assets/gifs/error-page-game.gif` | GIF | Navigate to unknown route, show 404 + Shelf Hop gameplay |
-| Architecture flow | `assets/gifs/architecture-flow.gif` | GIF | Animated system flow (see storyboard below) |
-| Desktop Lighthouse | `assets/screenshots/lighthouse-desktop.png` | PNG | Full Lighthouse report — desktop, production URL |
-| Mobile Lighthouse | `assets/screenshots/lighthouse-mobile.png` | PNG | Full Lighthouse report — mobile, production URL |
+### Hero
+
+| File | Type |
+|---|---|
+| `assets/hero/build-archive-preview.gif` | GIF |
+| `assets/hero/build-archive-preview.mp4` | MP4 |
+| `assets/hero/.gitkeep` | placeholder |
+
+### GIFs + matching MP4s
+
+| File | Matching MP4 |
+|---|---|
+| `assets/gifs/homepage-overview.gif` | `homepage-overview.mp4` |
+| `assets/gifs/logmoth-interaction.gif` | `logmoth-interaction.mp4` |
+| `assets/gifs/blog-narration.gif` | `blog-narration.mp4` |
+| `assets/gifs/project-modal.gif` | `project-modal.mp4` |
+| `assets/gifs/error-page-game.gif` | `error-page-game.mp4` |
+| `assets/gifs/architecture-flow.gif` | `architecture-flow.mp4` |
+| `assets/gifs/.gitkeep` | — |
+
+### Screenshots
+
+| File | Purpose |
+|---|---|
+| `hero-section.png` | Static hero proof |
+| `homepage-desktop-light.png` | Soft mode desktop |
+| `homepage-desktop-space.png` | Space mode desktop |
+| `homepage-mobile-light.png` | Soft mode mobile |
+| `homepage-mobile-space.png` | Space mode mobile |
+| `about-section.png` | About section |
+| `capability-graph.png` | Skills / capability graph |
+| `experience-section.png` | Experience section |
+| `projects-section.png` | Projects grid |
+| `signalforge-project-modal.png` | Project modal static proof |
+| `field-notes-section.png` | Field notes section |
+| `blog-narration-modal.png` | Narration modal static proof |
+| `logmoth-greeting.png` | Logmoth greeting |
+| `logmoth-recruiter-answer.png` | Recruiter-mode answer |
+| `logmoth-story-answer.png` | Story-mode answer |
+| `loading-page.png` | Creative loading page |
+| `error-page-game.png` | 404 / Shelf Hop static |
+| `lighthouse-desktop.png` | Desktop Lighthouse report |
+| `lighthouse-mobile.png` | Mobile Lighthouse report |
+| `assets/screenshots/.gitkeep` | placeholder |
+
+### Diagrams
+
+| File | Purpose |
+|---|---|
+| `assets/diagrams/architecture-flow-storyboard.md` | Frame-by-frame architecture animation notes |
 
 ---
 
-## Capture specifications
+## Assets used in README
+
+| Asset | File used | Purpose |
+|---|---|---|
+| Hero preview | `build-archive-preview.gif` (+ MP4 link) | Cinematic open |
+| Homepage overview | `homepage-overview.gif` (+ MP4) | Visual walkthrough |
+| Logmoth interaction | `logmoth-interaction.gif` (+ MP4) | Visual walkthrough |
+| Blog narration | `blog-narration.gif` (+ MP4) | Visual walkthrough + narration section |
+| Project modal | `project-modal.gif` (+ MP4) | Visual walkthrough |
+| Theme switch | `homepage-desktop-light.png` + `homepage-desktop-space.png` | Static Soft/Space proof (no GIF) |
+| Error page game | `error-page-game.gif` (+ MP4) | Visual walkthrough |
+| Architecture flow | `architecture-flow.gif` (+ MP4) | Architecture section |
+| Logmoth answer proof | `logmoth-recruiter-answer.png` | Logmoth section |
+| Blog narration proof | `blog-narration-modal.png` | Narration section |
+| Lighthouse desktop | `lighthouse-desktop.png` | QA section |
+| Lighthouse mobile | `lighthouse-mobile.png` | QA section |
+
+Supporting docs also reference additional screenshots where useful (design system Soft/Space, loading page, SignalForge modal).
+
+---
+
+## Missing optional assets
+
+| Asset | Status | Workaround |
+|---|---|---|
+| `assets/gifs/theme-switch.gif` (+ MP4) | Missing | Soft/Space static screenshots used instead |
+| Repository social preview (`repository-open-graph.png`, `repo-card.png`, `social-preview.png`, etc.) | Missing | No social-preview note embedded in README |
+| Dedicated palette / token screenshot with hex values | Missing | Descriptive tokens only — no invented hex |
+| Architecture diagram PNG/SVG (static) | Missing | Mermaid diagrams + architecture-flow GIF used |
+
+### To capture later
+
+- [ ] `theme-switch.gif` (+ optional MP4) — Soft → Space → Soft, 5–6 sec
+- [ ] Repository social preview card for GitHub sharing (final branding, not a template with placeholder text)
+- [ ] Optional: polished replacement for `architecture-flow.gif` if the current animation feels rough
+- [ ] Optional: palette strip screenshot once production CSS tokens are exported
+
+---
+
+## Recommended capture specs
 
 ### General
 
-- **Source:** Production deployment at [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/)
-- **Do not capture from local dev** — production build only
-- **No private content** — verify no personal private details appear in any capture
-- **Default theme:** Soft mode unless the asset specifically requires Space mode
+- **Source:** Production only — [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/)
+- **No private content** in any frame
+- **Default theme:** Soft mode unless the asset requires Space mode
 
 ### Viewports
 
 | Form factor | Resolution | Use for |
 |---|---|---|
-| Desktop | 1440 × 900 | GIFs, hero preview, Lighthouse desktop |
-| Mobile | 390 × 844 | Lighthouse mobile (optional mobile GIFs) |
+| Desktop | 1440 × 900 | GIFs, hero, Lighthouse desktop |
+| Mobile | 390 × 844 | Mobile screenshots, Lighthouse mobile |
 
 ### GIF settings
 
 | Setting | Recommendation |
 |---|---|
 | Frame rate | 15–24 fps |
-| Duration | 5–12 seconds per GIF |
+| Duration | 5–12 seconds |
 | Tool | ScreenToGif, Kap, or LICEcap |
-| Optimization | Compress after capture; target under 5 MB per GIF |
+| Size | Compress; prefer under ~5 MB per GIF when practical |
 
 ### PNG settings
 
 | Setting | Recommendation |
 |---|---|
-| Lighthouse | Full report panel visible, not cropped to score numbers |
-| Format | PNG for crisp text rendering |
+| Lighthouse | Full report panel visible |
+| Format | PNG for crisp text |
 
 ---
 
-## Per-asset capture guide
+## Naming convention
 
-### Hero preview (`assets/hero/build-archive-preview.gif`)
+```
+assets/
+  hero/
+    build-archive-preview.gif
+    build-archive-preview.mp4
+  gifs/
+    <feature-name>.gif
+    <feature-name>.mp4
+  screenshots/
+    <section-or-state>.png
+  diagrams/
+    <diagram-name>.md | .png | .svg
+```
 
-1. Open production site in desktop viewport
-2. Start recording at the loading page animation
-3. Capture: load → hero reveal → brief scroll to projects → Logmoth peek
-4. 8–12 seconds, cinematic pacing
-5. Optional: export MP4 version for README embedding alternatives
+Rules:
 
-### Homepage overview (`assets/gifs/homepage-overview.gif`)
-
-1. Start at hero section
-2. Smooth scroll through: about → projects → experience → blog → contact
-3. Pause briefly on projects section
-4. 8–10 seconds
-
-### Logmoth interaction (`assets/gifs/logmoth-interaction.gif`)
-
-1. Open Logmoth chat panel
-2. Type a recruiter-style question (e.g., "What frontend technologies does Kaviya work with?")
-3. Show the clean answer appearing — no debug metadata
-4. 6–8 seconds
-
-### Blog narration (`assets/gifs/blog-narration.gif`)
-
-1. Navigate to a field note / blog post
-2. Press Play on narration controls
-3. Show active paragraph highlighting as speech progresses
-4. Pause, then Stop — show return to scroll mode
-5. 8–10 seconds
-
-### Project modal (`assets/gifs/project-modal.gif`)
-
-1. Click a featured project card (SignalForge recommended)
-2. Show modal open with case-study content
-3. Brief scroll within modal
-4. Close modal
-5. 6–8 seconds
-
-### Theme switch (`assets/gifs/theme-switch.gif`)
-
-1. Start in Soft mode
-2. Toggle to Space mode — show full visual transition
-3. Toggle back to Soft mode
-4. 5–6 seconds
-
-### Error page game (`assets/gifs/error-page-game.gif`)
-
-1. Navigate to an unknown route (e.g., `/this-page-does-not-exist`)
-2. Show branded 404 page
-3. Play a few seconds of Shelf Hop
-4. Show recovery CTA
-5. 8–10 seconds
-
-### Architecture flow (`assets/gifs/architecture-flow.gif`)
-
-Animated diagram following the storyboard in [assets/diagrams/architecture-flow-storyboard.md](../assets/diagrams/architecture-flow-storyboard.md).
-
-Can be produced as:
-- Screen recording of a designed animation (Figma, After Effects)
-- Programmatic animation exported as GIF
-- Stepped reveal of a static diagram with motion
+- kebab-case only
+- no spaces in filenames
+- matching GIF/MP4 pairs share the same basename
+- do not invent filenames in docs before the file exists
 
 ---
 
-## Architecture flow storyboard reference
+## MP4 / GIF usage rule
 
-| Frame | Scene | Visual notes |
-|---|---|---|
-| 1 | Visitor opens The Build Archive | Browser chrome, loading animation |
-| 2 | Next.js renders the archive shell | Hero and sections appear |
-| 3 | Visitor opens Logmoth | Chat panel slides in, moth glow |
-| 4 | Question moves into `/api/logmoth/ask` | Dotted connector line to API node |
-| 5 | Local archive retrieval finds records | Soft archive cards highlight |
-| 6 | Deterministic composer drafts answer | Text assembly visual |
-| 7 | Azure refinement improves answer | Optional polish step, subtle glow |
-| 8 | Local fallback handles failure | Fallback path shown as alternate route |
-| 9 | Clean answer in UI | No debug metadata, clean bubble |
-
-Visual style: soft archive cards, moth glow accents, dotted connector lines, step-by-step reveal. Not childish — editorial and technical.
+1. Prefer **GIF inline** in README for visual walkthroughs (GitHub renders GIFs natively).
+2. Add an **MP4 link below** when a matching `.mp4` exists.
+3. Use **PNG screenshots** for static proof (Lighthouse, Soft/Space, Logmoth answer states).
+4. Use **Mermaid** for architecture diagrams in markdown.
+5. Use existing diagram PNG/SVG only if present — do not invent paths.
+6. Never embed a social-preview template that still shows GitHub placeholder text; mark templates as reference-only if added later.
+7. If a GIF is missing but a screenshot exists, use the screenshot. If both are missing, keep the section text-only.
 
 ---
 
-## Completion checklist
+## Category map (requested → actual)
 
-- [ ] `assets/hero/build-archive-preview.gif`
-- [ ] `assets/gifs/homepage-overview.gif`
-- [ ] `assets/gifs/logmoth-interaction.gif`
-- [ ] `assets/gifs/blog-narration.gif`
-- [ ] `assets/gifs/project-modal.gif`
-- [ ] `assets/gifs/theme-switch.gif`
-- [ ] `assets/gifs/error-page-game.gif`
-- [ ] `assets/gifs/architecture-flow.gif`
-- [ ] `assets/screenshots/lighthouse-desktop.png`
-- [ ] `assets/screenshots/lighthouse-mobile.png`
-- [ ] Color palette values captured from production CSS → [design-system.md](./design-system.md)
+| Category | Asset used |
+|---|---|
+| Hero preview | `assets/hero/build-archive-preview.gif` (+ `.mp4`) |
+| Homepage overview | `assets/gifs/homepage-overview.gif` (+ `.mp4`) |
+| Logmoth interaction | `assets/gifs/logmoth-interaction.gif` (+ `.mp4`) |
+| Blog narration | `assets/gifs/blog-narration.gif` (+ `.mp4`) / `blog-narration-modal.png` |
+| Project modal | `assets/gifs/project-modal.gif` (+ `.mp4`) / `signalforge-project-modal.png` |
+| Theme switch | Soft/Space PNGs (GIF missing) |
+| Error page / Shelf Hop | `assets/gifs/error-page-game.gif` (+ `.mp4`) / `error-page-game.png` |
+| Architecture flow | `assets/gifs/architecture-flow.gif` (+ `.mp4`) |
+| Lighthouse desktop | `assets/screenshots/lighthouse-desktop.png` |
+| Lighthouse mobile | `assets/screenshots/lighthouse-mobile.png` |
+| Mobile screenshots | `homepage-mobile-light.png` / `homepage-mobile-space.png` |
+| Repository social preview | Not present |

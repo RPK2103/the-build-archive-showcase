@@ -1,6 +1,6 @@
 # QA Summary — The Build Archive
 
-> Public-safe QA summary. This documents final status and scores — not raw test logs or implementation details.
+> Public-safe QA summary. Final status and scores only — no raw test logs or implementation details.
 
 ## Final QA status
 
@@ -23,7 +23,7 @@ All checks passed before launch.
 
 ## Lighthouse scores
 
-Captured against the production deployment at [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/).
+Captured against [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/).
 
 ### Desktop
 
@@ -35,6 +35,8 @@ Captured against the production deployment at [kaviyashre-portfolio.vercel.app](
 | SEO | **100** |
 | CLS | **0.087** |
 
+![Lighthouse desktop](../assets/screenshots/lighthouse-desktop.png)
+
 ### Mobile
 
 | Metric | Score |
@@ -45,10 +47,9 @@ Captured against the production deployment at [kaviyashre-portfolio.vercel.app](
 | SEO | **100** |
 | CLS | **0.078** |
 
-Screenshots to be added:
+![Lighthouse mobile](../assets/screenshots/lighthouse-mobile.png)
 
-- `assets/screenshots/lighthouse-desktop.png`
-- `assets/screenshots/lighthouse-mobile.png`
+> Note: Lighthouse UI can vary slightly between runs. The tables above are the final QA proof numbers for this showcase. Screenshots are the captured report artifacts stored in the repo.
 
 ---
 
@@ -56,12 +57,14 @@ Screenshots to be added:
 
 | Area | What was done |
 |---|---|
-| Homepage CLS | Layout-stable hero and section mounting; CLS under 0.1 on both form factors |
+| Homepage CLS | Layout-stable hero and section mounting; CLS under 0.1 |
 | Hash navigation | Lazy-mounted section scroll-jump regression fixed |
 | Logmoth | Kept lightweight — no heavy client-side AI SDKs |
-| Hero image | Prioritized for LCP |
-| Shelf Hop | Dynamically imported on 404 only — zero homepage cost |
-| Reduced motion | `prefers-reduced-motion` respected across all animated surfaces |
+| Hero image | Prioritized for LCP / `fetchPriority` |
+| Shelf Hop | Dynamically imported on 404 only |
+| Reduced motion | Respected across animated surfaces |
+| SEO surface | Metadata, canonical URL, sitemap/robots, Open Graph/Twitter readiness |
+| Images | Optimized images; below-fold sections lazy-loaded |
 
 ---
 
@@ -73,15 +76,17 @@ Screenshots to be added:
 | No client-exposed secrets | Confirmed |
 | No public API keys in repository or client bundle | Confirmed |
 | No private archive data in public responses | Confirmed |
-| No confidential workplace details in archive or responses | Confirmed |
+| No confidential workplace details | Confirmed |
 | Logmoth refuses private / inappropriate prompts | Confirmed |
 | Azure credentials server-side only | Confirmed |
-| No debug metadata or source cards in visitor-facing UI | Confirmed |
+| No debug metadata or source cards in visitor UI | Confirmed |
 | This showcase repo contains no secrets or env values | Confirmed |
 
 ---
 
-## Logmoth QA
+## Feature QA
+
+### Logmoth
 
 | Test area | Status |
 |---|---|
@@ -94,22 +99,20 @@ Screenshots to be added:
 | Local fallback when Azure unavailable | Passed |
 | No debug/source metadata in UI | Passed |
 | Clean answer formatting | Passed |
+| No chat TTS | Passed |
 
----
-
-## Blog narration QA
+### Blog narration
 
 | Test area | Status |
 |---|---|
 | Paragraph extraction | Passed |
-| Play / pause / resume / stop controls | Passed |
+| Play / Pause / Resume / Stop | Passed |
 | Active paragraph highlight sync | Passed |
-| Stop returns to scroll mode | Passed |
+| Stop returns to Scroll Mode | Passed |
+| Closing modal cancels narration | Passed |
 | Web Speech API browser compatibility | Passed |
 
----
-
-## Error page QA
+### Error page
 
 | Test area | Status |
 |---|---|
@@ -123,13 +126,11 @@ Screenshots to be added:
 
 ## Production-readiness summary
 
-The Build Archive is production-ready:
-
 - All QA checks passed
-- Lighthouse scores meet or exceed targets (100 a11y/SEO/BP on both form factors)
+- Lighthouse scores meet targets (100 a11y / SEO / best practices on both form factors)
 - Security and privacy boundaries enforced
-- Graceful degradation for Azure and browser speech API
-- Source code and private archive data remain in the private repository
-- This public showcase repository documents decisions without exposing implementation
+- Graceful degradation for Azure and browser speech
+- Source code and private archive data remain private
+- This public showcase documents decisions without exposing implementation
 
 **Live:** [kaviyashre-portfolio.vercel.app](https://kaviyashre-portfolio.vercel.app/)
