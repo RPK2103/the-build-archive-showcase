@@ -148,6 +148,125 @@ Deeper system notes → [docs/architecture.md](./docs/architecture.md)
 
 ---
 
+## Git-Backed Markdown CMS
+
+The production portfolio now loads portfolio content from **Git-backed Markdown files** instead of hardcoded TypeScript data arrays. The UI is unchanged — same sections, same modals, same editorial layout. Only the **content source** moved: Markdown files plus assets in the repo replace inline data definitions.
+
+This is a maintainability decision, not a headless CMS product. I can add a project, field note, experience entry, or certification by editing Markdown and dropping in images — without touching React components or redeploying layout code for every content change.
+
+### Why it matters
+
+| Before | After |
+|---|---|
+| Content lived in TypeScript arrays beside UI code | Content lives in Markdown files with frontmatter |
+| Every new project meant editing component data | New entries are new files in a content directory |
+| Logmoth archive records were maintained separately | Public-safe records derive from the same Markdown pipeline |
+| Content and presentation were coupled | Content and presentation are separated at the loader boundary |
+
+For a solo portfolio, that separation keeps iteration fast without introducing a database, admin panel, or third-party CMS.
+
+### Content workflow
+
+1. **Author** — Create or edit a Markdown file with YAML frontmatter and body content.
+2. **Add assets** — Place images or media in the content asset folders referenced by the file.
+3. **Load** — Server-side Markdown loaders read files at build or request time.
+4. **Normalize** — Typed normalizers map frontmatter and body into validated portfolio shapes.
+5. **Render** — Existing UI sections consume the normalized data exactly as before.
+6. **Sync** — Public-safe fields flow into Logmoth archive records for deterministic retrieval.
+
+Draft, private, and internal entries are excluded by convention and validation — they never reach the live UI or Logmoth index.
+
+### Pipeline
+
+```mermaid
+flowchart TD
+    A[Markdown Content Files] --> B[Server-side Markdown Loaders]
+    B --> C[Typed Normalizers]
+    C --> D[Validated Portfolio Content]
+    D --> E[Existing UI Sections]
+    D --> F[Logmoth Archive Records]
+
+    E --> G[Projects]
+    E --> H[Field Notes / Blogs]
+    E --> I[Experience]
+    E --> J[Certifications]
+
+    F --> K[Deterministic Retrieval]
+    K --> L[Safe Logmoth Answers]
+```
+
+### Supported content areas
+
+| Area | What Markdown drives |
+|---|---|
+| **Projects** | Case-study metadata, summaries, tech stack, links, modal body |
+| **Field Notes / Blogs** | Post frontmatter, article body, narration-ready paragraphs |
+| **Experience** | Role timeline entries, responsibilities, highlights |
+| **Certifications** | Credential metadata, issuer, dates, verification links |
+| **Logmoth archive** | Public-safe derived records for retrieval (not hand-maintained duplicates) |
+
+### Example content structure
+
+Illustrative layout only — not a copy of the private production tree:
+
+```
+content/
+├── projects/
+│   └── sample-project.md
+├── field-notes/
+│   └── sample-post.md
+├── experience/
+│   └── sample-role.md
+└── certifications/
+    └── sample-cert.md
+```
+
+A typical project file might look like:
+
+```markdown
+---
+title: "Sample Project"
+summary: "One-line recruiter scan line."
+tech: ["Next.js", "TypeScript"]
+featured: true
+status: "published"
+---
+
+## Problem
+What the project solved.
+
+## Outcome
+What shipped and what it demonstrated.
+```
+
+Files marked `draft` or carrying private-only frontmatter never pass validation and are omitted from the build and archive sync.
+
+### How Logmoth sync works
+
+Logmoth does not read Markdown directly in the browser. During the content pipeline, **public-safe fields** from validated Markdown entries are transformed into structured archive records — the same records the deterministic retrieval layer already searches.
+
+That means:
+
+- One source of truth for portfolio copy and Logmoth answers
+- No second spreadsheet or JSON file to keep in sync
+- Retrieval stays local and deterministic; Azure still only refines wording
+
+Questions about projects, experience, or field notes pull from records that originated in Markdown, filtered to what is safe to expose publicly.
+
+### Safety boundaries
+
+| Boundary | Behavior |
+|---|---|
+| **Draft content** | Excluded from build output and archive index |
+| **Private / internal notes** | Never validated into public shapes |
+| **Client bundle** | Raw Markdown files and full archive records stay server-side |
+| **Logmoth** | Only public-safe derived fields; same refusal rules as before |
+| **This showcase repo** | Documents the architecture; does not ship the production content tree or loaders |
+
+The CMS layer does not change Logmoth's safety model — it gives retrieval a cleaner, version-controlled input.
+
+---
+
 ## Ask The Archive
 
 **Logmoth** is the archive-native assistant. It is not a support chatbot and not a generic ChatGPT wrapper. It answers public-safe questions about projects, experience, skills, role-fit, personality, field notes, and build history — grounded in a local archive before any cloud call.
